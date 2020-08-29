@@ -1,4 +1,4 @@
-## Install the following -
+## Install the following
 pip3 install pycryptodome
 pip3 install opencv-python
 pip3 install face_recognition           ** works on Linux
