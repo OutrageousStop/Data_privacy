@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+<div class="jumbotron" style="margin-top: 15em;">
+  <h1 class="display-4 text-center">Data Anonymization and Encryption</h1>
+  <hr class="my-4">
+  <div class="text-center">
+  <a class="btn btn-primary btn-lg" href="{{ url_for('access_file') }}" role="button">Access a file</a>
+  <a class="btn btn-primary btn-lg" href="{{ url_for('anonymize_Encrypt') }}" role="button">Anonymize and Encrypt</a>
+  <a class="btn btn-primary btn-lg" href="{{ url_for('grant_permission') }}" role="button">Grant Permission</a>
+  <a class="btn btn-primary btn-lg" href="{{ url_for('addface') }}" role="button">Add Face</a>
+  </div>
+  </div>
+</div>
+</div>
+{% endblock content %}

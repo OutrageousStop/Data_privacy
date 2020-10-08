@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron" style="margin-top: 15em;">
+        <h1 class="display-4 text-center">Grant Permission</h1>
+        <form action="{{ url_for('grant_permission_process') }}" enctype="multipart/form-data" method="POST">
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input class="form-control" type="text" placeholder="Username" name="username">
+                <label for="filename">File Name</label>
+                <input class="form-control" type="text" placeholder="Username" name="filename">
+                <div class="form-group">
+                    <label for="exampleInputPassword1">key</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="key" name="Enc_key">
+                </div>
+                <button type="submit" class="btn btn-primary">Grant Permission</button>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock content %}

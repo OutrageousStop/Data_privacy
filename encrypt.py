@@ -23,7 +23,7 @@ def encrypt(data, cipher):
 
 with open(file_name + '.encrypted', 'wb') as fs:
     key = pad(key, 16)[:16]
-    cipher = cipher = AES.new(key, AES.MODE_CBC)
+    cipher = AES.new(key, AES.MODE_CBC)
     fs.write(cipher.iv)
     fs.write(encrypt(data, cipher))
 

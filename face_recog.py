@@ -104,6 +104,8 @@ while True:
                 exit()
 
     if flag == 1:
+        print(users_list)
+        print(file_name)
         print("User Not Authorized")
         video_capture.release()
         cv2.destroyAllWindows()

@@ -18,7 +18,7 @@ with open('users.store.db', 'rb') as fs:
     users_list = pickle.load(fs)
 if user not in users_list:
     users_list[user] = {}
-    users_list[user][file_name] = key
+users_list[user][file_name] = key
 
 with open('users.store.db', 'wb') as fs:
     pickle.dump(users_list, fs)

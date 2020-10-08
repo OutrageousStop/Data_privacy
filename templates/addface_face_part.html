@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="container">
+    <div class="jumbotron" style="margin-top: 15em;">
+        <h1 class="display-4 text-center">New Face</h1>
+        {% block insider %}
+        <hr class="my-4">
+        <label>Username</label>
+        <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{name}}">
+        <div class="text-center">
+            <img src="{{ url_for('addface_API', name=name) }}">
+        </div>
+        <button class="btn btn-primary" id="btn">submit</button>
+        {% endblock insider %}
+    </div>
+</div>
+{% endblock content %}
+{% block script %}
+<script>
+    $("#btn").click(function(e) {
+        window.location = "{{ url_for('addface_success') }}";
+    });
+</script>
+{% endblock script %}
